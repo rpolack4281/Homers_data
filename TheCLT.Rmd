@@ -24,11 +24,17 @@ In the graph above it is not unimodal, but in fact bimodal, seeing that there ar
 
 Now take 2 random samples of 1000 points of the kkardashtemp variable and form 1000 points of their averages,
 
-
+```{r}
+numb = 2
+Hdata   <- sample(Homers_data$kkardashtemp ,size = numb*1000, replace=T)
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 2")
+```
 
 Describe the resulting plot -  is it unimodal?  How many peaks does it have?  Are all the peaks the same size? 
 
-
+The plot above is not unimodal, but instead trimodal due to having three peaks instead of a singular peak. All three peaks are not of the same size. The sample mean is `r mean(x.avg)` and the standard deviation is `r sd(x.avg)`.
 
 Do this again for 4 random samples
 
