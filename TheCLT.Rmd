@@ -1,0 +1,51 @@
+---
+title: "The CLT"
+author: "Rachel Polack"
+date: "Summer 2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+require(tidyverse)
+require(lattice)
+```
+
+```{r}
+Homers_data <- read.csv(file="Homers_data.csv")
+my1000 <- sample(Homers_data$kkardashtemp ,size = 1000, replace=T)
+densityplot(my1000,main="original data")
+options(digits = 1)
+```
+
+Describe the resulting plot -  is it unimodal?  How many peaks does it have?  Are all the peaks the same size? 
+
+In the graph above it is not unimodal, but in fact bimodal, seeing that there are two peaks instead of just a singular peak. Both peaks are not of the same size. The sample mean is `r mean(my1000)` and the standard deviation is `r sd(my1000)`. 
+
+Now take 2 random samples of 1000 points of the kkardashtemp variable and form 1000 points of their averages,
+
+
+
+Describe the resulting plot -  is it unimodal?  How many peaks does it have?  Are all the peaks the same size? 
+
+
+
+Do this again for 4 random samples
+
+
+
+
+
+
+Then again for 9 random samples
+
+
+
+
+then 16 random samples
+
+
+finally for 36 random samples.
+
+
+Write a summary paragraph describing what you observed and how it relates to the central limit theorem.
