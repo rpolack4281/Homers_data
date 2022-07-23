@@ -89,3 +89,5 @@ The sample mean is `r mean(x.avg)` and the standard deviation is `r sd(x.avg)`.
 
 
 Write a summary paragraph describing what you observed and how it relates to the central limit theorem.
+
+When viewing all the graphs and random sample size in each graph, there is a pattern that slowly agrees with the theory of CLT. from the looks of the graphs the larger the random samples the smaller the sample mean and the standard deviation seem to be. The graphs also show that with the higher sample sizes the graphs slowly become unimodal, instead of trimodal, bimodal, or even multimodel like you see with sample size 4. 
