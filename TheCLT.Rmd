@@ -38,9 +38,15 @@ The plot above is not unimodal, but instead trimodal due to having three peaks i
 
 Do this again for 4 random samples
 
+```{r}
+numb = 4
+Hdata   <- sample(Homers_data$kkardashtemp ,size = numb*1000, replace=T)
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 4")
+```
 
-
-
+The sample mean is `r mean(x.avg)` and the standard deviation is `r sd(x.avg)`.
 
 
 Then again for 9 random samples
