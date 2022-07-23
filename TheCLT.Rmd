@@ -51,7 +51,15 @@ The sample mean is `r mean(x.avg)` and the standard deviation is `r sd(x.avg)`.
 
 Then again for 9 random samples
 
+```{r}
+numb = 9
+Hdata   <- sample(Homers_data$kkardashtemp ,size = numb*1000, replace=T)
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 9")
+```
 
+The sample mean is `r mean(x.avg)` and the standard deviation is `r sd(x.avg)`.
 
 
 then 16 random samples
